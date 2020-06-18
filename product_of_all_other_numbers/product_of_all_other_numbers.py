@@ -5,7 +5,21 @@ Returns: a List of integers
 def product_of_all_other_numbers(arr):
     # Your code here
 
-    pass
+    final_arr = [0] * len(arr)
+
+    for i in range(len(final_arr)):
+        product = 1
+        temp = arr[i]
+        arr[i] = 1
+
+        for j in arr:
+
+            product = product * j
+
+        arr[i] = temp
+        final_arr[i] = product
+
+    return final_arr
 
 
 if __name__ == '__main__':

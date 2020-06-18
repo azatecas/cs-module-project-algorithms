@@ -5,7 +5,16 @@ Returns: an integer
 def single_number(arr):
     # Your code here
 
-    pass
+    hold = []
+    if len(arr) == 0:
+        return False
+    else:
+        for item in arr:
+            if item in hold:
+                hold.remove(item)
+            else:
+                hold.append(item)
+    return hold[0]
 
 
 if __name__ == '__main__':
